@@ -52,7 +52,20 @@ Different reasoning patterns:
 	
 > Intercausal reasoning
 
-Probabilistic distributions flow – an active trail is a trail 
+#### Conditional independence
+
+P satisfies 
+<img src="https://render.githubusercontent.com/render/math?math=X \perp Y | Z"> 
+if 
+<img src="https://render.githubusercontent.com/render/math?math=P(X,Y|Z)=P(Y|Z)*P(X|Z)"> 
+or equivalently 
+<img src="https://render.githubusercontent.com/render/math?math=P(X|Y,Z)=P(X|Z)">
+or equivalently
+<img src="https://render.githubusercontent.com/render/math?math=P(Y|X,Z)=P(Y|Z)">
+
+#### Probabilistic distributions flow 
+
+An active trail is a trail 
 <img src="https://render.githubusercontent.com/render/math?math=X_{1}-...-X_{n}">. 
 where for any v-structure 
 <img src="https://render.githubusercontent.com/render/math?math=X_{i-1} \leftarrow X_{i} \rightarrow X_{i+1}">. 
@@ -62,11 +75,16 @@ part of the observed variables (the v-structure is said to be activated) and no 
 <img src="https://render.githubusercontent.com/render/math?math=X_{j}">. 
 is observed. 
 
-Conditional independence 
+More maths and more on this ; three cases
 
-P satisfies X⊥Y | Z if P(X,Y | Z)= P(Y | Z)*P(X | Z) or equivalently P(X ┤|Y,Z)= P(X | Z) or equivalently P(Y ┤|X,Z)= P(Y | Z).
+(1) tail-tail
 
-d-separation – X and Y are d-separated in G given Z if there is no active trail in G between X and Y given Z, notation 
+
+
+
+#### d-separation 
+
+> X and Y are d-separated in G given Z if there is no active trail in G between X and Y given Z, notation 
 <img src="https://render.githubusercontent.com/render/math?math=d-sep_{G}(X,Y|Z)">. 
 
 
