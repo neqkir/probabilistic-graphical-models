@@ -150,6 +150,14 @@ When a trail is not blocked, it is an active trail, as per the definition above.
 X and Y are d-separated in G given Z if there is no active trail in G between X and Y given Z, notation 
 <img src="https://render.githubusercontent.com/render/math?math=d-sep_{G}(X,Y|Z)">. 
 
+### Independence of Bayesian Networks
 
+If P factorizes over G, and <img src="https://render.githubusercontent.com/render/math?math=d-sep_{G}(X,Y|Z)"> then P satisfies <img src="https://render.githubusercontent.com/render/math?math=X \perp Y|Z">
+
+A property 
+
+> Any node is d-separated from its non-descendant given its parents.
+
+Which in turn implies that if P factorizes over G, then in P, any variable is independent of its non-descendants given its parents.
 
  
