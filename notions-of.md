@@ -1,4 +1,7 @@
-### probabilistic-graphical-models
+### Probabilistic graphical models 
+
+[Concepts and definitions, notes to Coursera Standford online course]
+https://www.coursera.org/learn/probabilistic-graphical-models
 
 Types of models
 
