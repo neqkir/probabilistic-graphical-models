@@ -164,4 +164,11 @@ Property : Any node is d-separated from its non-descendant given its parents.
 
 So that, if P factorizes over G, then in P, any variable is independent of its non-descendants given its parents.
 
+### I-maps
+
+In the previous paragraph, we saw that d-separation in G implies the corresponding independence statement. <img src="https://render.githubusercontent.com/render/math?math=I(G)"> is the set of independencies which derives from the d-separation statement, which writes, <img src="https://render.githubusercontent.com/render/math?math=I(G)=\{X \perp Y | Z : d-sep_{G}(X,Y|Z)\}">
+
+
+
+
  
