@@ -1,7 +1,7 @@
 ### Probabilistic graphical models 
 
-[Concepts and definitions, notes to Coursera Standford online course]
-https://www.coursera.org/learn/probabilistic-graphical-models
+[Concepts and definitions, notes to Coursera Standford online course
+https://www.coursera.org/learn/probabilistic-graphical-models] 
 
 Types of models
 
@@ -52,13 +52,23 @@ Different reasoning patterns:
 	
 > Intercausal reasoning
 
-Probabilistic distributions flow – an active trail is a trail X_1-…-X_n where for any v-structure X_(i-1)→X_i←X_(i+1) we have X_i part of the observed variables (the v-structure is said to be activated) and no other X_i is observed. 
+Probabilistic distributions flow – an active trail is a trail 
+<img src="https://render.githubusercontent.com/render/math?math=X_{1}-...-X_{n}">. 
+where for any v-structure 
+<img src="https://render.githubusercontent.com/render/math?math=X_{i-1} \leftarrow X_{i} \rightarrow X_{i+1}">. 
+we have 
+<img src="https://render.githubusercontent.com/render/math?math=X_{i}">. 
+part of the observed variables (the v-structure is said to be activated) and no other 
+<img src="https://render.githubusercontent.com/render/math?math=X_{j}">. 
+is observed. 
 
 Conditional independence 
 
 P satisfies X⊥Y | Z if P(X,Y | Z)= P(Y | Z)*P(X | Z) or equivalently P(X ┤|Y,Z)= P(X | Z) or equivalently P(Y ┤|X,Z)= P(Y | Z).
 
-D-separation – X and Y are d-separated in G given Z if there is no active trail in G between X and Y given Z, notation 〖d-sep〗_G (X,Y ┤|  Z). 
+d-separation – X and Y are d-separated in G given Z if there is no active trail in G between X and Y given Z, notation 
+<img src="https://render.githubusercontent.com/render/math?math=d-sep_{G}(X,Y|Z)">. 
+
 
  
  
