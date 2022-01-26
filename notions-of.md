@@ -1,4 +1,4 @@
-### Probabilistic graphical models 
+### probabilistic graphical models 
 
 [Concepts and definitions, notes to Coursera Standford online course
 https://www.coursera.org/learn/probabilistic-graphical-models] 
