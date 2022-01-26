@@ -79,7 +79,18 @@ More maths and more on this ; three cases
 
 (1) tail-tail
 
+<img src="https://user-images.githubusercontent.com/89974426/151158642-1e0eb728-aab3-43b9-adf2-0026e781c222.PNG" width=20% height=20%>
 
+Conditioning on Z in the tail-tail case makes X and Y independent, that is 
+<img src="https://render.githubusercontent.com/render/math?math=X \perp Y | Z">.
+
+Indeed, the joint distribution can be factored as 
+
+<img src="https://render.githubusercontent.com/render/math?math=P(X,Y,Z)=P(X|Z)*P(Y|Z)*P(Z)">
+
+and conditioning on Z we get 
+
+<img src="https://render.githubusercontent.com/render/math?math=P(X,Y|Z)= \frac{P(X,Y,Z)}{P(Z)} = \frac{P(X|Z)*P(Y|Z)*P(Z)}{P(Z)} = P(X|Z)*P(Y|Z)">
 
 
 #### d-separation 
