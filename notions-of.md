@@ -141,7 +141,7 @@ A path between two vertices is blocked with respect to a subset of vertices C if
 <img src="https://render.githubusercontent.com/render/math?math=v \in C">, or
 
 * the edges are head-head, and 
-<img src="https://render.githubusercontent.com/render/math?math=v \not \in C">, and neither are any of its descendants.
+<img src="https://render.githubusercontent.com/render/math?math=v \notin C">, and neither are any of its descendants.
 
 When a trail is not blocked, it is an active trail, as per the definition above.
 
@@ -150,14 +150,18 @@ When a trail is not blocked, it is an active trail, as per the definition above.
 X and Y are d-separated in G given Z if there is no active trail in G between X and Y given Z, notation 
 <img src="https://render.githubusercontent.com/render/math?math=d-sep_{G}(X,Y|Z)">. 
 
+An example
+
+<img src="https://user-images.githubusercontent.com/89974426/151166687-19e3e7ec-a986-40e0-a460-40b43e2cf249.PNG" width=13% height=13%>
+
+B is observed. A and D are d-separated because A-D is a head-tail with observed B. A and E are not because there is a trail between them, through C, which is head-head with C unobserved.
+
 ### Independence of Bayesian Networks
 
-If P factorizes over G, and <img src="https://render.githubusercontent.com/render/math?math=d-sep_{G}(X,Y|Z)"> then P satisfies <img src="https://render.githubusercontent.com/render/math?math=X \perp Y|Z">
+Theorem : If P factorizes over G, and <img src="https://render.githubusercontent.com/render/math?math=d-sep_{G}(X,Y|Z)"> then P satisfies <img src="https://render.githubusercontent.com/render/math?math=X \perp Y|Z">
 
-A property 
+Property : Any node is d-separated from its non-descendant given its parents.
 
-> Any node is d-separated from its non-descendant given its parents.
-
-Which in turn implies that if P factorizes over G, then in P, any variable is independent of its non-descendants given its parents.
+So that, if P factorizes over G, then in P, any variable is independent of its non-descendants given its parents.
 
  
