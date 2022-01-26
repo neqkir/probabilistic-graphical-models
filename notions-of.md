@@ -52,7 +52,7 @@ Different reasoning patterns:
 	
 > Intercausal reasoning
 
-#### Conditional independence
+### Conditional independence
 
 P satisfies 
 <img src="https://render.githubusercontent.com/render/math?math=X \perp Y | Z"> 
@@ -63,7 +63,7 @@ or equivalently
 or equivalently
 <img src="https://render.githubusercontent.com/render/math?math=P(Y|X,Z)=P(Y|Z)">
 
-#### Probabilistic distributions flow 
+### Probabilistic distributions flow 
 
 An active trail is a trail 
 <img src="https://render.githubusercontent.com/render/math?math=X_{1}-...-X_{n}">. 
@@ -75,7 +75,7 @@ part of the observed variables (the v-structure is said to be activated) and no 
 <img src="https://render.githubusercontent.com/render/math?math=X_{j}">. 
 is observed. 
 
-More maths and more on this ; three cases
+**More illustrated maths and more on this ; three cases**
 
 (1) tail-tail
 
@@ -106,13 +106,50 @@ Indeed, the joint distribution can be factored as
 (if you wonder why refer to the definition of Bayesian Networks above and its chain rule, 
 
 <img src="https://render.githubusercontent.com/render/math?math=P(X_{1},...,X_{n})= \prod{P(X_{i}|Par_{G}(X_{i}))}"> with the above notations, and where 
-<img src="https://render.githubusercontent.com/render/math?math=Par_{G}(X_{i})"> refers to the parents nodes for <img src="https://render.githubusercontent.com/render/math?math=X_{i}">
+<img src="https://render.githubusercontent.com/render/math?math=Par_{G}(X_{i})"> refers to the parents nodes for <img src="https://render.githubusercontent.com/render/math?math=X_{i}">)
 
-#### d-separation 
+and conditioning on the value of Z we get (using the Bayes’ theorem)
 
-> X and Y are d-separated in G given Z if there is no active trail in G between X and Y given Z, notation 
+<img src="https://render.githubusercontent.com/render/math?math=P(X,Y|Z)= \frac{P(X,Y,Z)}{P(Z)} = \frac{P(X)*P(Z|X)*P(Y|Z)}{P(Z)} = \frac{P(X|Z)*P(Y|Z)*P(Z)}{P(Z)} = P(X|Z)*P(Y|Z)">
+
+(3) head-head
+
+<img src="https://user-images.githubusercontent.com/89974426/151161801-6b449afd-9efd-4e8d-9a1c-3901a2d8691d.PNG" width=13% height=13%>
+
+This is trickier. 
+
+We can write as before our joint-distribution 
+
+<img src="https://render.githubusercontent.com/render/math?math=P(X,Y,Z)=P(X)*P(Y)*P(Z|X,Y)">
+
+but here conditioning on Z does not make X and Y necessarily independent. 
+
+We can however write the <img src="https://render.githubusercontent.com/render/math?math=P(X,Y)"> as a marginalization over Z, that is
+
+<img src="https://render.githubusercontent.com/render/math?math=P(X,Y)= \sum_{Z} P(X,Y,Z) = \sum_{Z} P(X)*P(Y)*P(Z|X,Y) = P(X)*P(Y)">
+
+since 
+<img src="https://render.githubusercontent.com/render/math?math=\sum_{Z} P(Z|X,Y) = 1">
+
+As a result, in the head-head case we have marginal independence between X and Y, that is <img src="https://render.githubusercontent.com/render/math?math=X \perp Y">
+
+**back to probabilistic flows**
+
+A path between two vertices is blocked with respect to a subset of vertices C if it passes through a vertex v, such that either:
+
+* the edges are head-tail or tail-tail, and 
+<img src="https://render.githubusercontent.com/render/math?math=v \in C">, or
+
+* the edges are head-head, and 
+<img src="https://render.githubusercontent.com/render/math?math=v \not \in C">, and neither are any of its descendants.
+
+When a trail is not blocked, it is an active trail, as per the definition above.
+
+### d-separation 
+
+X and Y are d-separated in G given Z if there is no active trail in G between X and Y given Z, notation 
 <img src="https://render.githubusercontent.com/render/math?math=d-sep_{G}(X,Y|Z)">. 
 
 
- 
+
  
