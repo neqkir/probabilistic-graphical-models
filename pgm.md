@@ -158,17 +158,37 @@ B is observed. A and D are d-separated because A-D is a head-tail with observed 
 
 ### Independence of Bayesian Networks
 
-Theorem : If P factorizes over G, and <img src="https://render.githubusercontent.com/render/math?math=d-sep_{G}(X,Y|Z)"> then P satisfies <img src="https://render.githubusercontent.com/render/math?math=X \perp Y|Z">
+Theorem 
 
-Property : Any node is d-separated from its non-descendant given its parents.
+If P factorizes over G, and <img src="https://render.githubusercontent.com/render/math?math=d-sep_{G}(X,Y|Z)"> then P satisfies <img src="https://render.githubusercontent.com/render/math?math=X \perp Y|Z">
+
+Property 
+
+Any node is d-separated from its non-descendant given its parents.
 
 So that, if P factorizes over G, then in P, any variable is independent of its non-descendants given its parents.
 
-### I-maps
+**I-maps**
 
 In the previous paragraph, we saw that d-separation in G implies the corresponding independence statement. <img src="https://render.githubusercontent.com/render/math?math=I(G)"> is the set of independencies which derives from the d-separation statement, which writes, <img src="https://render.githubusercontent.com/render/math?math=I(G)=\{X \perp Y | Z : d-sep_{G}(X,Y|Z)\}">
 
+Definition
 
+If P satisfies <img src="https://render.githubusercontent.com/render/math?math=I(G)">, we say that G is an I-map (indenpendency map) of P.
 
+**back to our first theorem**
 
+We deduce from the above that, if P factorizes over G, then G is an I-map for P. In fact we also have reciprocally, if G is an I-map for P, then P factorizes over G.
+
+Let's visualize the reciprocal and hint at its demonstration.
+
+<img src="https://user-images.githubusercontent.com/89974426/151169598-ac94fcbe-3bc2-4640-af35-977247989b35.PNG" width=13% height=13%>
+
+Using the chain rule of probabilities (not the Bayes rule since we don't know yet whether this is a Bayesian Network) we can write
+
+<img src="https://render.githubusercontent.com/render/math?math=P(D,I,G,S,L)=P(D)*P(I|D)*P(G|D,I)*P(S|D,I,G)*P(L|D,I,G,S)">.
+
+As a reminder, this is because <img src="https://render.githubusercontent.com/render/math?math=P(D)*P(I|D)=P(D,I)"> etc.
+
+Here we have <img src="https://render.githubusercontent.com/render/math?math=P(I|D)=P(I)"> since <img src="https://render.githubusercontent.com/render/math?math=D \perp I">. Then <img src="https://render.githubusercontent.com/render/math?math=P(S|D,I,G)"> is the probability of S conditioned by its parent I and two non-descendants. P factorizes over G, so that in P, any variable is independent of its non-descendants given its parents and <img src="https://render.githubusercontent.com/render/math?math=P(S|D,I,G)=P(S|I)">.  
  
