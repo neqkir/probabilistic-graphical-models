@@ -1,6 +1,6 @@
 ### probabilistic graphical models 
 
-[Concepts and definitions, notes to Coursera Standford online course
+[Concepts and definitions, more explanation, following the curriculum of the Coursera Standford online course
 https://www.coursera.org/learn/probabilistic-graphical-models] 
 
 Types of models
@@ -79,7 +79,7 @@ More maths and more on this ; three cases
 
 (1) tail-tail
 
-<img src="https://user-images.githubusercontent.com/89974426/151158642-1e0eb728-aab3-43b9-adf2-0026e781c222.PNG" width=20% height=20%>
+<img src="https://user-images.githubusercontent.com/89974426/151158642-1e0eb728-aab3-43b9-adf2-0026e781c222.PNG" width=13% height=13%>
 
 Conditioning on Z in the tail-tail case makes X and Y independent, that is 
 <img src="https://render.githubusercontent.com/render/math?math=X \perp Y | Z">.
@@ -92,6 +92,21 @@ and conditioning on Z we get
 
 <img src="https://render.githubusercontent.com/render/math?math=P(X,Y|Z)= \frac{P(X,Y,Z)}{P(Z)} = \frac{P(X|Z)*P(Y|Z)*P(Z)}{P(Z)} = P(X|Z)*P(Y|Z)">
 
+(2) head-tail
+
+<img src="https://user-images.githubusercontent.com/89974426/151159552-2c92f398-284c-4df4-b1e4-00f79598baf0.PNG" width=6% height=6%>
+
+Likewise conditioning on Z in the head-tail case makes X and Y independent, that is 
+<img src="https://render.githubusercontent.com/render/math?math=X \perp Y | Z">.
+
+Indeed, the joint distribution can be factored as 
+
+<img src="https://render.githubusercontent.com/render/math?math=P(X,Y,Z)=P(X)*P(Z|X)*P(Y|Z)">
+
+(if you wonder why refer to the definition of Bayesian Networks above and its chain rule, 
+
+<img src="https://render.githubusercontent.com/render/math?math=P(X_{1},...,X_{n})= \prod{P(X_{i}|Par_{G}(X_{i}))}"> with the above notations, and where 
+<img src="https://render.githubusercontent.com/render/math?math=Par_{G}(X_{i})"> refers to the parents nodes for <img src="https://render.githubusercontent.com/render/math?math=X_{i}">
 
 #### d-separation 
 
