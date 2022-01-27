@@ -219,7 +219,7 @@ which shows the factorization over G.
 
 ### Naive Bayes
 
-A unobserved class and observed features <img src="https://render.githubusercontent.com/render/math?math=X_{i}"> : the naive bayesian independence assumption says that every pair of features is conditionally independent given the class, or <img src="https://render.githubusercontent.com/render/math?math=X_{i} \perp X_{j} | C \forall X_{i}, X_{j}">, so that the Naive Bayes model comes down to the pairwise interaction between the class variable and the individual features. In other terms we have
+A unobserved class and observed features <img src="https://render.githubusercontent.com/render/math?math=X_{i}"> : the naive bayesian independence assumption says that every pair of features is conditionally independent given the class, or <img src="https://render.githubusercontent.com/render/math?math=X_{i} \perp X_{j} | C"> <img src="https://render.githubusercontent.com/render/math?math=\forall X_{i}, X_{j}">, so that the Naive Bayes model comes down to the pairwise interaction between the class variable and the individual features. In other terms we have
 
 <img src="https://render.githubusercontent.com/render/math?math=P(C,X_{1},...,X_{n})=P(C) \prod P(X_{i}|C))">
 
