@@ -208,7 +208,7 @@ where <img src="https://render.githubusercontent.com/render/math?math=P(C)"> is 
 
 If we look at the ratio of the probabilities of two different classes given the same features observations 
 
-<img src="https://render.githubusercontent.com/render/math?math= \frac{P(C=c_{1}|x_{1},...,x_{n})}{P(C=c_{2}|x_{1},...,x_{n})}=\frac{P(C=c_{1})}{P(C=c_{2})} \prod \frac{P(X_{i}|C=c_{1})}{P(X_{i}|C=c_{2})}">
+<img src="https://render.githubusercontent.com/render/math?math= \frac{P(C=c_{1}|x_{1},...,x_{n})}{P(C=c_{2}|x_{1},...,x_{n})} = \frac{P(C=c_{1})}{P(C=c_{2})} \prod \frac{P(X_{i}|C=c_{1})}{P(X_{i}|C=c_{2})}">
 
 where the first term is the ratio of the prior probabilities and the second is the product of the "odds ratios", i.e., the ratios of the probabilities of a given observation in the context of two classes.   
 
