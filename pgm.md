@@ -31,8 +31,20 @@ A joint distribution, e.g.,
 <img src="https://render.githubusercontent.com/render/math?math=P(X_{1},...,X_{n})"> 
 is a factor when for every combination of 
 <img src="https://render.githubusercontent.com/render/math?math=X_{1},X_{2},X_{3}"> 
-we get a value. An unnormalize measure is a factor also, e.g., 
-P(X〗_1,X_2,x_3,0) which scope is 〖{X〗_1,X_2}. A conditional probability distribution is a factor, e.g., 〖P(X〗_1 |X_2,X_3) meaning that for every combination of values for X_2 and X_3 we have a probability distribution over X_1.  
+we get a value. 
+
+An unnormalize measure is a factor also, e.g., 
+<img src="https://render.githubusercontent.com/render/math?math=P(X_{1},X_{2},X_{3})"> 
+which scope is 
+<img src="https://render.githubusercontent.com/render/math?math={X_{1},X_{2}}">.
+
+A conditional probability distribution is a factor, e.g., <img src="https://render.githubusercontent.com/render/math?math=P(X_{1}|X_{2},X_{3})"> 
+meaning that for every combination of values for 
+<img src="https://render.githubusercontent.com/render/math?math=X_{2}">.
+and
+<img src="https://render.githubusercontent.com/render/math?math=X_{3}">
+we have a probability distribution over 
+<img src="https://render.githubusercontent.com/render/math?math=X_{1}">.  
 
 Factor operations include
 
@@ -42,7 +54,16 @@ Factor operations include
 	
 > Factor reduction, fixing the value taken by a subset of the RVs, and reducing the scope accordingly
 
-A Bayesian Network is a Directed Acyclic Graph (DAG) whose nodes represent the RVs X_1,X_2,…,X_n. For each node X_i is defined a conditional probability distribution on its parents 〖P(X〗_i |〖Par〗_G (X_i )). The Bayesian Network represents a joint distribution via the chain rule for Bayesian Networks 〖P(X〗_1,〖…,X〗_n)= ∏▒〖〖P(X〗_i |〖Par〗_G (X_i ))〗. We say that the probability distribution factorizes over G. 
+A Bayesian Network is a Directed Acyclic Graph (DAG) whose nodes represent the RVs 
+<img src="https://render.githubusercontent.com/render/math?math=X_{1},X_{2},...,X_{n}">. 
+
+For each node <img src="https://render.githubusercontent.com/render/math?math=X_{i}"> 
+is defined a conditional probability distribution on its parents <img src="https://render.githubusercontent.com/render/math?math=P(X_{i}|Par_{G}(X_{i}))">. 
+
+The Bayesian Network represents a joint distribution via the chain rule for Bayesian Networks 
+<img src="https://render.githubusercontent.com/render/math?math=P(X_{1},...,X_{n})= \prod P(X_{i}|Par_{G}(X_{i}))">. 
+
+We say that the probability distribution factorizes over G. 
 
 Different reasoning patterns: 
 
@@ -208,7 +229,7 @@ where <img src="https://render.githubusercontent.com/render/math?math=P(C)"> is 
 
 If we look at the ratio of the probabilities of two different classes given the same features observations 
 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{P(C=c_{1}|x_{1},...,x_{n})}{P(C=c_{2}|x_{1},...,x_{n})}=\frac{P(C=c_{1})}{P(C=c_{2})} \prod \frac{P(X_{i}|C=c_{1})}{P(X_{i}|C=c_{2})}">
+<img src="https://render.githubusercontent.com/render/math?math=\frac{P(C=c_{1}|x_{1},...,x_{n})}{P(C=c_{2}|x_{1},...,x_{n})}=\frac{P(C=c_{1})}{P(C=c_{2})} \prod \frac{P(x_{i}|C=c_{1})}{P(x_{i}|C=c_{2})}">
 
 where the first term is the ratio of the prior probabilities and the second is the product of the "odds ratios", i.e., the ratios of the probabilities of a given observation in the context of two classes.   
 
