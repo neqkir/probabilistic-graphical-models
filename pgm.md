@@ -201,3 +201,14 @@ which shows the factorization over G.
 A unobserved class and observed features <img src="https://render.githubusercontent.com/render/math?math=X_{i}"> : the naive bayesian independence assumption says that every pair of features is conditionally independent given the class, or <img src="https://render.githubusercontent.com/render/math?math=X_{i} \perp X_{j} | C \forall X_{i}, X_{j}">, so that the Naive Bayes model comes down to the pairwise interaction between the class variable and the individual features. In other terms we have
 
 <img src="https://render.githubusercontent.com/render/math?math=P(C,X_{1},...,X_{n})=P(C) \prod P(X_{i}|C))">
+
+where <img src="https://render.githubusercontent.com/render/math?math=P(C)"> is called the prior probability of C.
+
+#### Naive Bayes classifier
+
+If we look at the ratio of the probabilities of two different classes given the same features observations 
+
+<img src="https://render.githubusercontent.com/render/math?math= \frac{P(C=c_{1}|x_{1},...,x_{n})}{P(C=c_{2}|x_{1},...,x_{n})}=\frac{P(C=c_{1})}{P(C=c_{2})} \prod \frac{P(X_{i}|C=c_{1})}{P(X_{i}|C=c_{2})}">
+
+where the first term is the ratio of the prior probabilities and the second is the product of the "odds ratios", i.e., the ratios of the probabilities of a given observation in the context of two classes.   
+
