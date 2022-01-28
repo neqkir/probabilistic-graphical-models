@@ -239,7 +239,7 @@ The CPCS network is one of the largest available to the research community.
 
 <img src="https://user-images.githubusercontent.com/89974426/151556934-c55a8030-5477-47eb-a147-1d5b1dab4df4.PNG" width=60% height=60%>
 
-#### Template models
+### Template models
 
 > An example, image segmentation: classsifying each superpixel. 
 
