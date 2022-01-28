@@ -259,7 +259,7 @@ We start with the **Markov Assumption**. First the chain rule of probabiliy writ
 
 The Markov assumption says that the next step of our trajectory is independent of the past given the present, 
 
-<img src="https://render.githubusercontent.com/render/math?math=P(X^{t+1}) \perp P(X^{0:t-1}|P(X^{t})">.
+<img src="https://render.githubusercontent.com/render/math?math=P(X^{t + 1}) \perp P(X^{0:t-1}|P(X^{t})">.
 
 It is a forgetting assumption. So that we can simplify the previous chain rule as 
 
