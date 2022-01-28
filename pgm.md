@@ -253,9 +253,9 @@ We introduce the notion of template variables, which are instanciated (duplicate
 
 Temporal models represent a distribution over time. Time is discretized given a certain time granularity. We consider a set of template random variables indexed by time, <img src="https://render.githubusercontent.com/render/math?math=X^{t}"> and we denote <img src="https://render.githubusercontent.com/render/math?math=X^{t:t'}=\{X^{t},...,X^{t'}\}"> a trajectory. We want to represent the probability distribution of a trajectory, <img src="https://render.githubusercontent.com/render/math?math=P(X^{t:t'})">, or in fact, an infinite family of probability distributions, since we can look at trajectories of duration 1, 2, ..., 1 million etc.
 
-We start with the Markov Assumption
+We start with the Markov Assumption. First the chain rule of probabiliy writes
 
-<img src="https://render.githubusercontent.com/render/math?math=P(X^{0:T})=P(X^{0}) \prod_{t=0}^{T-1} P(X^{t+1}|X^{0:t})">.
+<img src="https://render.githubusercontent.com/render/math?math=P(X^{0:T})=P(X^{0}) \bigprod_{t=0}^{T-1} P(X^{t+1}|X^{0:t})">.
 
 
 
