@@ -265,6 +265,12 @@ It is a forgetting assumption. So that we can simplify the previous chain rule a
 
 <img src="https://render.githubusercontent.com/render/math?math=P(X^{0:T})=P(X^{0}) \displaystyle\prod^{T-1}_{t=0} P(X^{t\!%2B\!1}|X^{t})">.
 
+A second assumption to simplify our model is **Time Invariance**. Given a template probability model <img src="https://render.githubusercontent.com/render/math?math=P(X'|X)">, for all t we have
+
+<img src="https://render.githubusercontent.com/render/math?math=P(X^{t\!%2B\!1}|X^{t})=P(X'|X)">.
+
+
+
 
 
 
