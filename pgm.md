@@ -15,7 +15,7 @@ Examples
 
 > Medical diagnosis through diagnostic questions
 
-> Text information retrieval, retrieving for instance information about persons, locations and organization in a text, one variable for each word, which encodes the label for that word (person, location, organization)
+> Text information retrieval, retrieving for instance information about persons, locations and organization in a text, one variable for each word, which encodes the label for that word (person, location, organization), this is called named entity recognition
 
 > Biological network reconstruction, for instance discovering new relationships between proteins
 
@@ -232,4 +232,32 @@ If we look at the ratio of the probabilities of two different classes given the 
 <img src="https://render.githubusercontent.com/render/math?math=\frac{P(C=c_{1}|x_{1},...,x_{n})}{P(C=c_{2}|x_{1},...,x_{n})}=\frac{P(C=c_{1})}{P(C=c_{2})} \prod \frac{P(x_{i}|C=c_{1})}{P(x_{i}|C=c_{2})}">
 
 where the first term is the ratio of the prior probabilities and the second is the product of the "odds ratios", i.e., the ratios of the probabilities of a given observation in the context of two classes.   
+
+#### Application to medical diagnosis
+
+The CPCS network is one of the largest available to the research community.
+
+<img src="https://user-images.githubusercontent.com/89974426/151556934-c55a8030-5477-47eb-a147-1d5b1dab4df4.PNG" width=60% height=60%>
+
+#### Template models
+
+> An example, image segmentation: classsifying each superpixel. 
+
+We don't want a separate model for each superpixel. All pixels share the same model relating the class of a pixel to its image features and all pairs of superpixels share the same edge model, relating adjacent superpixel. 
+
+The structure and the parameters of models pertaining to different parts / variables of a bayesian network can be shared to take similarities into account. Those variables will share the same dependencies structure and the same conditional probability distribution. 
+
+We introduce the notion of template variables, which are instanciated (duplicated) multiple times. In the above example, the superpixel labels are template variables. 
+
+#### Temporal models 
+
+Temporal models represent a distribution over time. Time is discretized given a certain time granularity. We consider a set of template random variables indexed by time, <img src="https://render.githubusercontent.com/render/math?math=X^{t}"> and we denote <img src="https://render.githubusercontent.com/render/math?math=X^{t:t'}=\{X^{t},...,X^{t'}\}"> a trajectory. We want to represent the probability distribution of a trajectory, <img src="https://render.githubusercontent.com/render/math?math=P(X^{t:t'})">, or in fact, an infinite family of probability distributions, since we can look at trajectories of duration 1, 2, ..., 1 million etc.
+
+We start with the Markov Assumption
+
+<img src="https://render.githubusercontent.com/render/math?math=P(X^{0:T})=P(X^{0}) \prod_{t=0}^{T-1} P(X^{t+1}|X^{0:t})">.
+
+
+
+
 
