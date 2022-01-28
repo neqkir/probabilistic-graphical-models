@@ -255,17 +255,15 @@ Temporal models represent a distribution over time. Time is discretized given a 
 
 We start with the **Markov Assumption**. First the chain rule of probabiliy writes
 
-<img src="https://render.githubusercontent.com/render/math?math=P(X^{0:T})=P(X^{0}) \displaystyle\prod^{T-1}_{t=0} P(X^{t+1}|X^{0:t})">.
+<img src="https://render.githubusercontent.com/render/math?math=P(X^{0:T})=P(X^{0}) \displaystyle\prod^{T-1}_{t=0} P(X^{t\!%2B\!1}|X^{0:t})">.
 
 The Markov assumption says that the next step of our trajectory is independent of the past given the present, 
 
-<img src="https://render.githubusercontent.com/render/math?math=P(X^{t + 1}) \perp P(X^{0:t-1}|P(X^{t})">.
+<img src="https://render.githubusercontent.com/render/math?math=P(X^{t\!%2B\!1}) \perp P(X^{0:t-1}|P(X^{t})">.
 
 It is a forgetting assumption. So that we can simplify the previous chain rule as 
 
-<img src="https://render.githubusercontent.com/render/math?math=P(X^{0:T})=P(X^{0}) \displaystyle\prod^{T-1}_{t=0} P(X^{t+1}|X^{t})">.
-
-
+<img src="https://render.githubusercontent.com/render/math?math=P(X^{0:T})=P(X^{0}) \displaystyle\prod^{T-1}_{t=0} P(X^{t\!%2B\!1}|X^{t})">.
 
 
 
