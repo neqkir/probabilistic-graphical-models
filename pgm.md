@@ -278,8 +278,12 @@ The 2TBN defines a conditional distribution
 
 <img src="https://render.githubusercontent.com/render/math?math=P(X'|X) = \displaystyle\prod^{n}_{i=1} P(X_{i}'|Pa_{X_{i}'})">.
 
+A **Dynamic Bayesian Network** over <img src="https://render.githubusercontent.com/render/math?math=X_{1},...,X_{n}"> is then defined by
 
+* a 2TBN over <img src="https://render.githubusercontent.com/render/math?math=X_{1},...,X_{n}">
+* a BN <img src="https://render.githubusercontent.com/render/math?math=BN^{0}"> over <img src="https://render.githubusercontent.com/render/math?math=X_{1}^{0},...,X_{n}^{0}">
 
+Under the Markovian and time invariance assumptions Dynamic Bayesian Networks can represent structures distributions over arbitrary long temporal trajectories. 
 
 
 
