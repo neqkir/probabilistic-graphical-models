@@ -269,6 +269,15 @@ A second assumption to simplify our model is **Time Invariance**. Given a templa
 
 <img src="https://render.githubusercontent.com/render/math?math=P(X^{t\!%2B\!1}|X^{t})=P(X'|X)">.
 
+Let's have a look at a particular transition model: a 2-time-slice Bayesian Network or 2TBN over <img src="https://render.githubusercontent.com/render/math?math=X_{1},...,X_{n}"> is specified as a BN fragment such that 
+
+* the nodes include <img src="https://render.githubusercontent.com/render/math?math=X_{1}',...,X_{n}'"> and a subset of <img src="https://render.githubusercontent.com/render/math?math=X_{1},...,X_{n}">
+* only the nodes <img src="https://render.githubusercontent.com/render/math?math=X_{1}',...,X_{n}'"> have parents and a CPD.
+
+The 2TBN defines a conditional distribution 
+
+<img src="https://render.githubusercontent.com/render/math?math=P(X'|X) = \displaystyle\prod^{n}_{i=1} P(X_{i}'|Pa_{X_{i}'})">.
+
 
 
 
